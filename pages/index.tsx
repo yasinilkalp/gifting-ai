@@ -3,12 +3,12 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import DropDown, { VibeType } from "../components/DropDown";
+import DropDown, { WhoType } from "../components/DropDown";
 import LoadingDots from "../components/LoadingDots";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
-  const [who, setWho] = useState<VibeType>("Kız Arkadaşıma");
+  const [who, setWho] = useState<WhoType>("Kız Arkadaşıma");
   const [generatedBios, setGeneratedBios] = useState<String>("");
 
   const bioRef = useRef<null | HTMLDivElement>(null);
