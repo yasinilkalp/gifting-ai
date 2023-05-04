@@ -4,13 +4,11 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import DropDown, { VibeType } from "../components/DropDown";
-import Footer from "../components/Footer";
 import LoadingDots from "../components/LoadingDots";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
-  const [bio, setBio] = useState("");
-  const [vibe, setVibe] = useState<VibeType>("Kız Arkadaşıma");
+  const [who, setWho] = useState<VibeType>("Kız Arkadaşıma");
   const [generatedBios, setGeneratedBios] = useState<String>("");
 
   const bioRef = useRef<null | HTMLDivElement>(null);
@@ -21,7 +19,7 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `${vibe} Hediye almak istiyorum. Bana alabileceğim 2 hediye önerisi verir misin? Sadece önerileri yaz ve başına 1. 2. şeklinde belirt.`;
+  const prompt = `${who} Hediye almak istiyorum. Bana alabileceğim 2 hediye önerisi verir misin? Sadece önerileri yaz ve başına 1. 2. şeklinde belirt.`;
 
   const generateSuggest = async (e: any) => {
     e.preventDefault();
@@ -78,7 +76,7 @@ const Home: NextPage = () => {
               <p className="text-left font-medium">Kime Hediye Alacaksınız?</p>
             </div>
             <div className="block">
-              <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
+              <DropDown who={who} setWho={(newWho) => setWho(newWho)} />
             </div>
           </div>
 
@@ -126,7 +124,7 @@ const Home: NextPage = () => {
                         className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
                         onClick={() => {
                           navigator.clipboard.writeText(generatedBio);
-                          toast("Bio copied to clipboard", {
+                          toast("Hediye Önerisi Hafızaya alındı", {
                             icon: "✂️",
                           });
                         }}
@@ -141,7 +139,6 @@ const Home: NextPage = () => {
           )}
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
