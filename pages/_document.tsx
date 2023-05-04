@@ -8,19 +8,19 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="Generate your next Twitter bio in seconds."
+            content="Saniyeler İçinde Hediye Önerisi oluştur."
           />
-          <meta property="og:site_name" content="twitterbio.com" />
+          <meta property="og:site_name" content="hediye.vercel.app" />
           <meta
             property="og:description"
-            content="Generate your next Twitter bio in seconds."
+            content="Saniyeler İçinde Hediye Önerisi oluştur."
           />
-          <meta property="og:title" content="Twitter Bio Generator" />
+          <meta property="og:title" content="Hediye Önerisi Oluştur" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Twitter Bio Generator" />
+          <meta name="twitter:title" content="Hediye Önerisi Oluştur" />
           <meta
             name="twitter:description"
-            content="Generate your next Twitter bio in seconds."
+            content="Saniyeler İçinde Hediye Önerisi oluştur."
           />
           <meta
             property="og:image"
